@@ -1,0 +1,22 @@
+Routing Table.
+Is a list of networks that the router knows about information about how to reach tose networks.
+
+
+Include
+
+Directly connected networks
+- Added to the routing table automatically.
+- Directly connected to one of the interfaces on the local router.
+
+
+Static Routes
+- Manually added to the configuration of the router
+- Very good for small simple networks
+- Do not nynamically ad just to changes in my Network Topology.
+
+
+Default routes
+- Optional router that is used when no explicit path to a destination is found in the routing table.
+
+
+Only in Serial interfaces recommend to use interface outgoing.
