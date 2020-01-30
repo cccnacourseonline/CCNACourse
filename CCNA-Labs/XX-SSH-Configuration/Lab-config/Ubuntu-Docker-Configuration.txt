@@ -1,22 +1,20 @@
-Routing Table.
-Is a list of networks that the router knows about information about how to reach tose networks.
+Ubuntu Docker Configuration
 
 
-Include
+1. Change interfaces file from /etc/network/ with "nano" editor.
 
-Directly connected networks
-- Added to the routing table automatically.
-- Directly connected to one of the interfaces on the local router.
+nano /etc/network/interfaces
 
 
-Static Routes
-- Manually added to the configuration of the router
-- Very good for small simple networks
-- Do not nynamically ad just to changes in my Network Topology.
+2.- Change the next lines.
+auto eth0
+iface eth0 inet static
+        address 10.1.1.100
+        netmask 255.255.255.0
+        gateway 10.1.1.254
 
 
-Default routes
-- Optional router that is used when no explicit path to a destination is found in the routing table.
+3.- Restart networking service.
 
+service networking restart
 
-Only in Serial interfaces recommend to use interface outgoing.
